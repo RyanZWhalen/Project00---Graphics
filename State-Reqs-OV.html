@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCBA Fingerprinting Requirements by State</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: 300;
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        
+        .states-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 0;
+        }
+        
+        .state-card {
+            padding: 25px;
+            border-bottom: 1px solid #eee;
+            border-right: 1px solid #eee;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .state-card:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .state-card.required {
+            border-left: 5px solid #e74c3c;
+        }
+        
+        .state-card.not-required {
+            border-left: 5px solid #27ae60;
+        }
+        
+        .state-card.pending {
+            border-left: 5px solid #f39c12;
+        }
+        
+        .state-name {
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .requirement-status {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .required .requirement-status {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .not-required .requirement-status {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .pending .requirement-status {
+            background: #f39c12;
+            color: white;
+        }
+        
+        .details {
+            margin-bottom: 15px;
+        }
+        
+        .detail-item {
+            margin: 8px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+        
+        .detail-item strong {
+            color: #2c3e50;
+        }
+        
+        .agency-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        
+        .agency-tag {
+            background: #ecf0f1;
+            color: #2c3e50;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            border: 1px solid #bdc3c7;
+        }
+        
+        .legend {
+            background: #f8f9fa;
+            padding: 20px;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+        }
+        
+        .legend-color.required {
+            background: #e74c3c;
+        }
+        
+        .legend-color.not-required {
+            background: #27ae60;
+        }
+        
+        .legend-color.pending {
+            background: #f39c12;
+        }
+        
+        @media (max-width: 768px) {
+            .states-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .state-card {
+                border-right: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>BCBA Fingerprinting Requirements Analysis</h1>
+            <p>Medicare & State-Level Compliance Requirements Across Five Target States</p>
+        </div>
+        
+        <div class="states-grid">
+            <div class="state-card required">
+                <div class="state-name">Tennessee</div>
+                <div class="requirement-status">Required</div>
+                <div class="details">
+                    <div class="detail-item"><strong>Authority:</strong> Tennessee Code §63-1-116</div>
+                    <div class="detail-item"><strong>Requirement:</strong> TBI & FBI fingerprint-based BGC for all healthcare license applicants</div>
+                    <div class="detail-item"><strong>Process:</strong> IdentoGo Centers by IDEMIA</div>
+                    <div class="detail-item"><strong>Timing:</strong> Prior to initial licensure</div>
+                </div>
+                <div class="agency-tags">
+                    <span class="agency-tag">TBI</span>
+                    <span class="agency-tag">FBI</span>
+                    <span class="agency-tag">IdentoGo</span>
+                </div>
+            </div>
+            
+            <div class="state-card required">
+                <div class="state-name">Ohio</div>
+                <div class="requirement-status">Required</div>
+                <div class="details">
+                    <div class="detail-item"><strong>License Type:</strong> COBA (Certified Ohio Behavior Analyst)</div>
+                    <div class="detail-item"><strong>Requirement:</strong> Ohio BCI & FBI fingerprint BGC</div>
+                    <div class="detail-item"><strong>Process:</strong> Ohio WebCheck vendor e-submissions</div>
+                    <div class="detail-item"><strong>Authority:</strong> Board of Psychology</div>
+                </div>
+                <div class="agency-tags">
+                    <span class="agency-tag">Ohio BCI</span>
+                    <span class="agency-tag">FBI</span>
+                    <span class="agency-tag">WebCheck</span>
+                </div>
+            </div>
+            
+            <div class="state-card required">
+                <div class="state-name">South Carolina</div>
+                <div class="requirement-status">Required</div>
+                <div class="details">
+                    <div class="detail-item"><strong>Authority:</strong> 2022 Licensure Law (Bill 630)</div>
+                    <div class="detail-item"><strong>Requirement:</strong> SLED & FBI fingerprint BGC</div>
+                    <div class="detail-item"><strong>Process:</strong> SLED-specified forms</div>
+                    <div class="detail-item"><strong>Scope:</strong> Behavior analysts & technicians</div>
+                </div>
+                <div class="agency-tags">
+                    <span class="agency-tag">SLED</span>
+                    <span class="agency-tag">FBI</span>
+                    <span class="agency-tag">Bill 630</span>
+                </div>
+            </div>
+            
+            <div class="state-card not-required">
+                <div class="state-name">New Mexico</div>
+                <div class="requirement-status">Not Required</div>
+                <div class="details">
+                    <div class="detail-item"><strong>Status:</strong> No state licensure/registration for BCBAs/RBTs</div>
+                    <div class="detail-item"><strong>Framework:</strong> National BACB oversight only</div>
+                    <div class="detail-item"><strong>Medicare Classification:</strong> Limited-risk entity</div>
+                    <div class="detail-item"><strong>Exception:</strong> High-risk providers (5%+ interest) only</div>
+                </div>
+                <div class="agency-tags">
+                    <span class="agency-tag">BACB Only</span>
+                    <span class="agency-tag">Limited Risk</span>
+                </div>
+            </div>
+            
+            <div class="state-card pending">
+                <div class="state-name">California</div>
+                <div class="requirement-status">Pending</div>
+                <div class="details">
+                    <div class="detail-item"><strong>Status:</strong> Assembly Bill 1715 pending enactment</div>
+                    <div class="detail-item"><strong>Current:</strong> No professional fingerprint mandate for BCBAs</div>
+                    <div class="detail-item"><strong>Live Scan:</strong> Applies to other licensed professionals only</div>
+                    <div class="detail-item"><strong>Coverage:</strong> BBS oversight (LMFTs, LCSWs, LPCCs)</div>
+                </div>
+                <div class="agency-tags">
+                    <span class="agency-tag">AB 1715</span>
+                    <span class="agency-tag">BBS</span>
+                    <span class="agency-tag">Live Scan</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color required"></div>
+                <span>Fingerprinting Required</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color not-required"></div>
+                <span>Not Required</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color pending"></div>
+                <span>Pending Legislation</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
